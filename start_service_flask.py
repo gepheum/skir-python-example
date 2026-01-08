@@ -1,7 +1,7 @@
 # Starts a skir service on http://localhost:8787/?myapi
 #
 # Run with:
-#   python start_service.py
+#   python start_service_flask.py
 #
 # Run call_service.py to call this service from another process.
 
