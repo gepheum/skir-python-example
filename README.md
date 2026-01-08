@@ -21,11 +21,27 @@ python snippets.py
 
 ### Start a skir service
 
+The example includes three different framework implementations. Choose one:
+
+#### Flask
 From one process, run:
 ```shell
-python start_service.py
+python start_service_flask.py
 ```
 
+#### FastAPI
+From one process, run:
+```shell
+uvicorn start_service_fastapi:app --host localhost --port 8787
+```
+
+#### Litestar
+From one process, run:
+```shell
+litestar --app start_service_starlite:app run --host localhost --port 8787
+```
+
+#### Call the service
 From another process, run:
 ```shell
 python call_service.py
