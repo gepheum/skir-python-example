@@ -7,11 +7,11 @@
 
 import urllib.parse
 
-import skir
 from flask import Flask, Response, request
+from skirout import service_skir, user_skir
 from werkzeug.datastructures import Headers
 
-from skirout import service_skir, user_skir
+import skir
 
 app = Flask(__name__)
 
@@ -47,6 +47,11 @@ service_impl = ServiceImpl()
 skir_service = skir.Service[Headers]()
 skir_service.add_method(service_skir.AddUser, service_impl.add_user)
 skir_service.add_method(service_skir.GetUser, service_impl.get_user)
+
+# Configure the service:
+# skir_service.options.can_send_unknown_error_message = True
+# skir_service.options.keep_unrecognized_values = True
+# ...
 
 
 @app.route("/")
