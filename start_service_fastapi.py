@@ -7,10 +7,10 @@
 
 import urllib.parse
 
-from fastapi import FastAPI, Request, Response
-from skirout import service_skir, user_skir
-
 import skir
+from fastapi import FastAPI, Request, Response
+
+from skirout import service_skir, user_skir
 
 app = FastAPI()
 
@@ -51,6 +51,7 @@ skir_service.add_method(service_skir.GetUser, service_impl.get_user)
 # skir_service.options.can_send_unknown_error_message = True
 # skir_service.options.keep_unrecognized_values = True
 # ...
+
 
 @app.get("/")
 async def hello_world():

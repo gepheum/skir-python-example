@@ -7,10 +7,10 @@
 
 import urllib.parse
 
-from litestar import Litestar, Request, Response, get, route
-from skirout import service_skir, user_skir
-
 import skir
+from litestar import Litestar, Request, Response, get, route
+
+from skirout import service_skir, user_skir
 
 
 class ServiceImpl:

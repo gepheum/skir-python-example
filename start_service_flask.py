@@ -7,11 +7,11 @@
 
 import urllib.parse
 
+import skir
 from flask import Flask, Response, request
-from skirout import service_skir, user_skir
 from werkzeug.datastructures import Headers
 
-import skir
+from skirout import service_skir, user_skir
 
 app = Flask(__name__)
 
