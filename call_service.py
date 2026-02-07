@@ -3,9 +3,9 @@
 #
 # Run with:
 #   python call_service.py
-import skir
-
 from skirout import service_skir, user_skir
+
+import skir
 
 if __name__ == "__main__":
     service_client = skir.ServiceClient("http://localhost:8787/myapi")
@@ -20,17 +20,11 @@ if __name__ == "__main__":
         ),
     )
 
-    res_headers: list[tuple[str, str]] = []
     service_client.invoke_remote(
         service_skir.AddUser,
         service_skir.AddUserRequest(user=user_skir.TARZAN),
         {"X-Foo": "hi"},
-        res_headers=res_headers,
     )
-
-    # How to get headers from the response:
-    x_bar_header = dict(res_headers).get("X-Bar")
-    print(f"Value of X-Bar header: {x_bar_header}")
 
     print("Done")
 
