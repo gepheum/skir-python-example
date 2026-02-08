@@ -3,9 +3,9 @@
 #
 # Run with:
 #   python call_service.py
-from skirout import service_skir, user_skir
-
 import skir
+
+from skirout import service_skir, user_skir
 
 if __name__ == "__main__":
     service_client = skir.ServiceClient("http://localhost:8787/myapi")

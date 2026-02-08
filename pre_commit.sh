@@ -127,4 +127,12 @@ if ! pyright --project . ; then
 fi
 echo "✅ Type checking passed!"
 
+# Run snippets.py
+echo "▶️  Running snippets.py..."
+if ! python snippets.py ; then
+    echo "❌ snippets.py execution failed!"
+    exit 1
+fi
+echo "✅ snippets.py executed successfully!"
+
 echo "🎉 All pre-commit checks passed! Ready to commit."
