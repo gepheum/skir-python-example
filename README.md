@@ -19,7 +19,7 @@ npx skir gen
 python snippets.py
 ```
 
-### Start a skir service
+### Start a SkirRPC service
 
 The example includes three different framework implementations. Choose one:
 

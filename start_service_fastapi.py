@@ -1,4 +1,4 @@
-# Starts a skir service on http://localhost:8787/?myapi
+# Starts a SkirRPC service on http://localhost:8787/?myapi
 #
 # Run with:
 #   uvicorn start_service_fastapi:app --host localhost --port 8787

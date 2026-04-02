@@ -1,4 +1,4 @@
-# Starts a skir service on http://localhost:8787/?myapi
+# Starts a SkirRPC service on http://localhost:8787/?myapi
 #
 # Run with:
 #   litestar --app start_service_starlite:app run --host localhost --port 8787
