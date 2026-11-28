@@ -1,7 +1,0 @@
-.DS_Store
-.venv
-__pycache__
-dist
-node_modules
-skirout
-tsconfig.tsbuildinfo
